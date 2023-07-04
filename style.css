@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+    --VeryLightGray: hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainBox{
+    align-items: center;
+    border-radius: 10px;
+    margin: 90px auto 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    color: var(--VeryLightGray);
+    overflow: hidden;
+    padding: 50px;
+    height: 440px;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img{
+    height: 40px;
+    width: 65px;
+}
+
+.tittle{
+    font-family: "Big Shoulders Display";
+    font-weight: 700;
+
+}
+
+p{
+    color: var(--TransparentWhite);
+    font-family: "Lexend Deca";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.se, .su, .lu{
+    padding: 5px;
+    background-color: var(--VeryLightGray);
+    border: 2px solid var(--VeryLightGray);
+    border-radius: 1000px;
+    font-size: 15px;
+    height: 40px;
+    width: 130px;
+    margin-top: 40px;
+}
+
+.se{
+    color: var(--BrightOrange);
+}
+.su{
+    color: var(--DarkCyan);
+}
+.lu{
+    color: var(--VeryDarkCyan);
+}
+
+.se:hover, .su:hover, .lu:hover{
+    background-color: transparent;
+    color: var(--VeryLightGray);
+}
+
+.sedans{
+    background-color: var(--BrightOrange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.suvs{
+    background-color: var(--DarkCyan);
+}
+.luxury{
+    background-color: var(--VeryDarkCyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media(min-width: 600px){
+    .mainBox{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .box{
+        height: 500px;
+        width: 306px;
+    }
+
+    .sedans{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .luxury{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
